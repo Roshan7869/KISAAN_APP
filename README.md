@@ -1,292 +1,264 @@
-# Kisaan Mitra - AI-Powered Agriculture Platform
+<p align="center">
+  <img src="assets/dashboard-screenshot.png" alt="Kisaan Mitra Dashboard" width="100%"/>
+</p>
 
-A comprehensive agriculture platform with AI-powered plant disease diagnosis and multilingual farmer assistance.
+<h1 align="center">🌾 Kisaan Mitra - AI Agriculture Platform</h1>
+
+<p align="center">
+  <strong>Empowering Indian Farmers with AI-Powered Agricultural Solutions</strong>
+</p>
+
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#quick-start">Quick Start</a> •
+  <a href="#tech-stack">Tech Stack</a> •
+  <a href="#documentation">Documentation</a> •
+  <a href="#contributing">Contributing</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js" alt="Next.js"/>
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react" alt="React"/>
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Gemini_AI-Powered-4285F4?style=for-the-badge&logo=google" alt="Gemini AI"/>
+</p>
+
+---
+
+## 📖 About
+
+**Kisaan Mitra** (किसान मित्र - Farmer's Friend) is a comprehensive, AI-powered agriculture platform designed specifically for Indian farmers. It brings together crop diagnosis, expert assistance, market insights, government schemes, and multilingual support—all in one place to help farmers make informed decisions, increase profits, and adopt modern practices.
+
+---
 
 ## ✨ Features
 
-- **AI Plant Doctor**: Upload plant images and get instant diagnosis using Google Gemini AI
-- **Multilingual Support**: Full support for 12 Indian languages including Hindi, Tamil, Telugu, Kannada, Malayalam, Marathi, Gujarati, Bengali, Punjabi, Odia, and Assamese
-- **Interactive Chat**: 24x7 AI assistant for farming queries with voice input/output
-- **Query-Based Analysis**: Ask specific questions about your plants in your preferred language
-- **Visual Disease Detection**: Advanced AI analysis with detailed treatment recommendations
-- **Secure Environment**: Centralized API key management with validation tools
+### 🔬 AI Plant Doctor
+Upload plant images for instant disease diagnosis using Google Gemini AI with detailed treatment recommendations in your preferred language.
+
+### 🌐 Multilingual Support (12 Languages)
+| Language | Native | Language | Native |
+|----------|--------|----------|--------|
+| English | English | Hindi | हिंदी |
+| Tamil | தமிழ் | Telugu | తెలుగు |
+| Kannada | ಕನ್ನಡ | Malayalam | മലയാളം |
+| Marathi | मराठी | Gujarati | ગુજરાતી |
+| Bengali | বাংলা | Punjabi | ਪੰਜਾਬੀ |
+| Odia | ଓଡ଼ିଆ | Assamese | অসমীয়া |
+
+### 🤖 Interactive AI Assistant
+24/7 chat with voice input/output for farming queries including:
+- Crop inputs and recommendations
+- Profit calculations
+- Solar-dried products
+- Government schemes
+
+### 📋 Government Schemes
+Latest agricultural schemes with AI-fetched details:
+- **PM-KISAN** - ₹6,000/year income support
+- **PMFBY** - Crop insurance
+- **Copra MSP 2026** - Minimum support prices
+- And many more...
+
+### 📰 Latest Agri News
+Real-time updates on market changes, weather advisories, and policy announcements.
+
+### 🧮 Input Calculator
+AI suggestions for seeds, pesticides, fertilizers, and profitable crops (including solar-dried powders for higher returns).
+
+---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 18+ installed
-- A Google account (for Gemini API)
+- **Node.js** 18+
+- **Google Account** (for Gemini API key)
 
-### 1. Install Dependencies
+### 1️⃣ Clone & Install
 
-\`\`\`bash
+```bash
+git clone https://github.com/Roshan7869/KISAAN_APP.git
+cd KISAAN_APP/frontend
 npm install
-\`\`\`
+```
 
-### 2. Setup Environment Variables
+### 2️⃣ Setup Environment Variables
 
 **Option A: Interactive Setup (Recommended)**
-\`\`\`bash
+```bash
 npm run setup-env
-\`\`\`
+```
 
 **Option B: Manual Setup**
-\`\`\`bash
+```bash
 cp .env.example .env.local
-\`\`\`
+```
 
-Then edit `.env.local` and add your API keys:
-\`\`\`env
-# Required: Google Gemini AI API Key
+Edit `.env.local`:
+```env
+# Required
 GEMINI_API_KEY=your_gemini_api_key_here
 
-# Optional: OpenRouter for AI fallback
+# Optional (fallback)
 OPENROUTER_API_KEY=your_openrouter_key_here
+```
 
-# Supabase keys are auto-configured via Vercel integration
-\`\`\`
+### 3️⃣ Get Free Gemini API Key
 
-### 3. Get Your Gemini API Key (FREE)
+1. Visit [Google AI Studio](https://aistudio.google.com/)
+2. Sign in → Click "Create API Key"
+3. Copy and paste into `.env.local`
 
-1. Visit [Google AI Studio](https://aistudio.google.com/app/apikey)
-2. Sign in with your Google account
-3. Click "Create API Key"
-4. Copy the key and add it to `.env.local`
+> **Free Tier Benefits:**
+> - ✅ 1,500 requests/day
+> - ✅ 60 requests/minute
+> - ✅ No credit card required
 
-**Free Tier Includes:**
-- 1,500 requests per day
-- 60 requests per minute
-- No credit card required
+### 4️⃣ Validate & Run
 
-### 4. Validate Configuration
-
-\`\`\`bash
+```bash
+# Validate configuration
 npm run validate-env
-\`\`\`
 
-Expected output:
-\`\`\`
-✅ ALL CHECKS PASSED
-All environment variables are properly configured!
-\`\`\`
-
-### 5. Start Development Server
-
-\`\`\`bash
+# Start development server
 npm run dev
-\`\`\`
+```
 
-Visit `http://localhost:3000` to see your application.
-
-### 6. Test API Health
-
-In a new terminal:
-\`\`\`bash
-npm run check-health
-\`\`\`
-
-## 📚 Documentation
-
-- **[QUICK_START.md](./QUICK_START.md)** - 5-minute setup guide
-- **[API_KEYS_AUDIT.md](./API_KEYS_AUDIT.md)** - Complete API key documentation
-- **[SECURITY_GUIDE.md](./SECURITY_GUIDE.md)** - Security best practices
-- **[ENVIRONMENT_SETUP.md](./ENVIRONMENT_SETUP.md)** - Detailed environment setup
-
-## 🎯 Usage
-
-### Camera Page (AI Plant Doctor)
-
-1. Navigate to the "Diagnose" page
-2. Select your preferred language from the dropdown
-3. Capture or upload a plant image
-4. Write your specific question (or use the default query)
-5. Click "Analyze with AI" to get instant diagnosis
-6. View detailed results in your selected language
-
-### Chat Floater (Kisaan Mitra AI)
-
-1. Click the floating AI button in the bottom-right corner
-2. Welcome message in Hindi: "आपकी खेती से जुड़े किसी भी सवाल में मदद के लिए मैं यहां हूं। फसल, कीट, खाद, मौसम, या सरकारी योजनाओं के बारे में पूछें!"
-3. Select your language by clicking the language icon
-4. Type your question or upload an image
-5. Use voice input (microphone icon) for hands-free interaction
-6. Get responses only in your selected language
-
-## 🌍 Multilingual Support
-
-All 12 Indian languages are supported with single-language responses:
-- English (English)
-- Hindi (हिंदी) - Default
-- Tamil (தமிழ்)
-- Telugu (తెలుగు)
-- Kannada (ಕನ್ನಡ)
-- Malayalam (മലയാളം)
-- Marathi (मराठी)
-- Gujarati (ગુજરાતી)
-- Bengali (বাংলা)
-- Punjabi (ਪੰਜਾਬੀ)
-- Odia (ଓଡ଼ିଆ)
-- Assamese (অসমীয়া)
-
-## 🔧 Available Scripts
-
-\`\`\`bash
-npm run dev              # Start development server
-npm run build            # Build for production
-npm run start            # Start production server
-npm run validate-env     # Validate environment variables
-npm run setup-env        # Interactive environment setup
-npm run check-health     # Test API connectivity
-npm run lint             # Run ESLint
-\`\`\`
-
-## 🔌 API Endpoints
-
-### POST `/api/analyze-image`
-
-Analyzes plant images with custom queries.
-
-**Request:**
-\`\`\`json
-{
-  "image": "data:image/jpeg;base64,...",
-  "query": "What disease is this?",
-  "language": "hi"
-}
-\`\`\`
-
-**Response:**
-\`\`\`json
-{
-  "success": true,
-  "analysis": "Detailed analysis in Hindi...",
-  "query": "What disease is this?",
-  "language": "hi",
-  "languageName": "Hindi (हिंदी)",
-  "timestamp": "2024-01-01T00:00:00.000Z"
-}
-\`\`\`
-
-### POST `/api/assistant`
-
-Chat with AI assistant in any Indian language.
-
-### GET `/api/health`
-
-Check API configuration and service health.
-
-## 🛠️ Technology Stack
-
-- **Frontend**: Next.js 16, React 19, TypeScript
-- **UI**: Tailwind CSS v4, shadcn/ui components
-- **AI**: Google Gemini 1.5 Flash API (primary), OpenRouter (fallback)
-- **Database**: Supabase (PostgreSQL)
-- **Deployment**: Vercel
-
-## 🔒 Security
-
-All sensitive data is stored in environment variables:
-- ✅ `.env.local` is in `.gitignore`
-- ✅ Validation scripts ensure proper configuration
-- ✅ Health checks for API connectivity
-- ✅ Proper separation of public vs private keys
-- ✅ No hardcoded API keys in code
-
-See [SECURITY_GUIDE.md](./SECURITY_GUIDE.md) for best practices.
-
-## 💡 Best Practices
-
-1. **Image Quality**: Use clear, well-lit images for better AI analysis
-2. **Specific Questions**: Ask targeted questions for more accurate responses
-3. **Language Selection**: Choose your preferred language before asking questions
-4. **Voice Features**: Grant microphone permission for voice input functionality
-5. **API Limits**: Monitor Gemini usage at https://aistudio.google.com/
-
-## 🐛 Troubleshooting
-
-### "Gemini API key not configured"
-
-**Solution:**
-\`\`\`bash
-# Check if .env.local exists
-ls -la .env.local
-
-# Verify key is set
-grep GEMINI_API_KEY .env.local
-
-# Restart dev server
-npm run dev
-\`\`\`
-
-### Port 3000 already in use
-
-**Solution:**
-\`\`\`bash
-# Use different port
-PORT=3001 npm run dev
-
-# Or kill existing process
-lsof -ti:3000 | xargs kill
-\`\`\`
-
-### Camera Not Working
-
-- Grant camera permissions in your browser
-- Use HTTPS (required for camera access)
-- Try the upload option as alternative
-
-### Language Not Displaying Correctly
-
-- Ensure your browser supports international fonts
-- Try Chrome (recommended)
-- Check if the language code is correct
-
-## 📊 API Usage Limits
-
-### Gemini (Free Tier)
-- 1,500 requests/day
-- 60 requests/minute
-- Monitor at: https://aistudio.google.com/
-
-### Supabase (Free Tier)
-- 500MB database
-- 2GB bandwidth/month
-- Unlimited API requests
-
-## 🚀 Deployment
-
-### Deploy to Vercel
-
-\`\`\`bash
-# Connect to Vercel
-vercel
-
-# Deploy to production
-vercel --prod
-\`\`\`
-
-**Important:** Set all environment variables in Vercel dashboard:
-1. Go to Project Settings → Environment Variables
-2. Add all keys from `.env.local`
-3. Select "Production" environment
-4. Save and redeploy
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit issues and pull requests.
-
-## 📄 License
-
-MIT License - feel free to use this project for your own applications.
-
-## 🆘 Support
-
-For issues and questions:
-1. Check the [documentation](./QUICK_START.md)
-2. Run diagnostics: `npm run validate-env`
-3. Create an issue in the repository
-4. Contact support
+Open [http://localhost:3000](http://localhost:3000) 🎉
 
 ---
 
-Built with ❤️ for farmers using cutting-edge AI technology.
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| **Frontend** | Next.js 16, React 19, TypeScript |
+| **Styling** | Tailwind CSS v4, shadcn/ui |
+| **AI Primary** | Google Gemini 1.5 Flash |
+| **AI Fallback** | OpenRouter (Amazon Nova) |
+| **Real-time Search** | Perplexity AI |
+| **Database** | Supabase (PostgreSQL) |
+| **Deployment** | Vercel |
+
+---
+
+## 📁 Project Structure
+
+```
+KISAAN_APP/
+├── frontend/                 # Next.js application
+│   ├── app/                  # App router pages
+│   │   ├── (dashboard)/      # Dashboard routes
+│   │   └── api/              # API routes
+│   ├── components/           # React components
+│   │   ├── kisaan-mitra/     # AI chat components
+│   │   └── ui/               # shadcn/ui components
+│   └── lib/
+│       └── ai/               # LLM integrations
+│           ├── gemini.ts     # Google Gemini
+│           ├── openrouter.ts # OpenRouter fallback
+│           └── perplexity.ts # Real-time search
+└── backend/                  # Express.js server (optional)
+    └── index.js              # Backend API
+```
+
+---
+
+## 🔧 Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Production build |
+| `npm run start` | Start production server |
+| `npm run validate-env` | Check configuration |
+| `npm run setup-env` | Interactive setup |
+| `npm run check-health` | API connectivity test |
+| `npm run lint` | Code quality check |
+
+---
+
+## 🎯 How to Use
+
+### 🔬 AI Plant Doctor
+1. Navigate to **Diagnose** page
+2. Select your preferred language
+3. Capture or upload a plant image
+4. Ask a specific question (or use default)
+5. Get instant diagnosis + treatment in your language
+
+### 💬 Kisaan Mitra AI Assistant
+1. Click the floating chat button (bottom-right)
+2. Select your language
+3. Type or speak your query
+4. Receive expert advice instantly
+
+> **Example queries:**
+> - "सौर सुखाए हुए प्याज पाउडर से कितना मुनाफा?"
+> - "What fertilizers for wheat in winter?"
+> - "PM-KISAN योजना की पात्रता क्या है?"
+
+### 📋 Government Schemes
+1. View top schemes on dashboard
+2. Click **View All** for complete list
+3. Select any scheme for AI-fetched details (procedure, eligibility, subsidies)
+
+---
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+
+# Production deployment
+vercel --prod
+```
+
+Add environment variables in **Vercel Dashboard** → Settings → Environment Variables.
+
+---
+
+## 🔒 Security
+
+- ✅ All API keys stored in environment variables
+- ✅ `.env.local` excluded from git
+- ✅ Built-in validation and health checks
+- ✅ No hardcoded secrets
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** - free to use and modify.
+
+---
+
+<p align="center">
+  <strong>Built with ❤️ for Indian farmers using cutting-edge AI technology</strong>
+  <br/>
+  <em>Empowering agriculture, one query at a time. 🌾🇮🇳</em>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Roshan7869/KISAAN_APP">⭐ Star this repo</a> •
+  <a href="https://github.com/Roshan7869/KISAAN_APP/issues">🐛 Report Bug</a> •
+  <a href="https://github.com/Roshan7869/KISAAN_APP/issues">✨ Request Feature</a>
+</p>
